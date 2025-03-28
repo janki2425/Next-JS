@@ -17,12 +17,12 @@ function Comments() {
         },
     ]
     return (
-        <div className='flex flex-col ml-[-20px] lg:ml-[-10px]'>
+        <div className='flex flex-col'>
             {
             commentList.map((com,index)=>(
-                <div key={index} className='py-1 pl-2'>
-                    <div className='flex items-start py-2 rounded-[10px] hover:bg-gray-100 dark:hover:bg-[#313131] justify-between'>
-                        <div className='flex gap-2 ml-2'>
+                <div key={index} className='py-1'>
+                    <div className='flex items-start py-2'>
+                        <div className='flex gap-2 w-full pr-5'>
                             <div className="rounded-full bg-gray-900 dark:bg-gray-300 w-[25px] h-[25px] lg:w-[35px] lg:h-[35px] lg:mr-1"></div>
                             <div className='flex flex-col'>
                                 <div className='flex gap-2'>
@@ -54,7 +54,7 @@ function Comments() {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex items-center">
+                        <div className="flex items-center p-2 mr-4 lg:mr-0 rounded-full hover:bg-gray-100 dark:hover:bg-[#313131]">
                             <Image src="/icons/more.svg"
                             width={20}
                             height={20}

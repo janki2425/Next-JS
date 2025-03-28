@@ -127,9 +127,9 @@ const Watch = () => {
       <div className="w-full max-w-[2314px] h-screen overflow-y-auto 2xl:mx-auto scrollbar-hide transition-all duration-300">
         <div className="pb-6 pt-4 lg:grid lg:grid-cols-[2fr_1fr] xl:grid-cols-[2.4fr_1fr] 2xl:grid-cols-[4.5fr_1fr] lg:gap-[6px] lg:pt-[26px] xl:pt-6">
           {/* Left Column: Video Player, Metadata, Comments (for lg screens) */}
-          <div className="px-5 ml-1">
+          <div className="px-5">
             {/* Video Player */}
-            <div className="w-full md:w-[580px] lg:w-full mx-auto">
+            <div className="md:w-[580px] lg:w-full mx-auto">
               <iframe
                 width="100%"
                 height="100%"
@@ -229,7 +229,7 @@ const Watch = () => {
               </div>
             </div>
 
-            <div className="flex flex-col w-full md:w-[730px] lg:w-full mx-auto bg-gray-100 dark:bg-[#313131] mt-3 lg:mt-[9px] py-2 lg:pb-4 px-2 gap-2 rounded-[10px]">
+            <div className="flex flex-col w-full mx-auto bg-gray-100 dark:bg-[#313131] mt-3 lg:mt-[9px] py-2 lg:pb-4 px-2 gap-2 rounded-[10px]">
               <div className="flex items-center gap-2 pl-1">
                 <p className="text-[11px] lg:text-[14px] font-[700] dark:text-white">
                   {staticData.views}

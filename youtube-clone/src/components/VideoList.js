@@ -17,9 +17,9 @@ const VideoList = ({ videoId, title, channel, views, timestamp }) => {
           ></iframe>
         </div>
         {/* Video Info */}
-        <div className="flex md:justify-between lg:justify-center flex-1 items-start">
-            <div className="flex flex-col 2xl:ml-[-28px]">
-                <h2 className="text-[11px] lg:text-[14px] font-[500] lg:w-[120px] xl:w-[210px] 2xl:w-[200px] lg:line-clamp-2 lg:ml-0.5 xl:ml-0">{title}</h2>
+        <div className="flex flex-1 items-start pr-5">
+            <div className="flex flex-col w-full">
+                <h2 className="text-[11px] lg:text-[14px] font-[500] lg:line-clamp-2">{title}</h2>
                 <p className="text-gray-500 dark:text-gray-400 text-[9px] lg:text-[12px]">
                     {channel}
                 </p>
@@ -32,7 +32,7 @@ const VideoList = ({ videoId, title, channel, views, timestamp }) => {
                 width={20}
                 height={20}
                 alt="more"
-                className="dark:invert lg:w-[24px] lg:h-[24px]"
+                className="dark:invert lg:w-[26px] lg:h-[26px]"
                 />
             </div>
         </div>
