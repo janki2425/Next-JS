@@ -61,10 +61,35 @@ const VideoFeed = ({ searchQuery, category, isSidebarVisible }) => {
     fetchData();
   }, [category, searchQuery]);
 
+  // return (
+  //   <div
+  //     className={`flex flex-wrap gap-4 lg:gap-2 ml-[18px] lg:ml-[15px] xl:ml-10 ${
+  //       isSidebarVisible ? "2xl:ml-48 lg:gap-2 2xl:gap-0" : "2xl:ml-20 lg:gap-4"
+  //     }`}
+  //   >
+  //     {error ? (
+  //       <p className="text-red-500">Error: {error}</p>
+  //     ) : videos.length > 0 ? (
+  //       videos.map((video) => (
+  //         <VideoCard
+  //           key={video.id.videoId}
+  //           videoId={video.id.videoId}
+  //           title={video.snippet.title}
+  //           channel={video.snippet.channelTitle}
+  //           views="N/A views"
+  //           timestamp={formatTimestamp(video.snippet.publishedAt || "Just now")}
+  //           isSidebarVisible={isSidebarVisible}
+  //         />
+  //       ))
+  //     ) : (
+  //       <p className="text-white">No videos found.</p>
+  //     )}
+  //   </div>
+  // );
   return (
     <div
-      className={`flex flex-wrap gap-4 lg:gap-2 ml-[18px] lg:ml-[15px] xl:ml-10 ${
-        isSidebarVisible ? "2xl:ml-48 lg:gap-2 2xl:gap-0" : "2xl:ml-20 lg:gap-4"
+      className={`grid grid-cols-1 md:grid-cols-2 gap-4 px-5 2xl:px-0 ${
+        isSidebarVisible ? "2xl:ml-48 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6 2xl:pl-3" : "2xl:ml-20 lg:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-6"
       }`}
     >
       {error ? (
@@ -86,6 +111,7 @@ const VideoFeed = ({ searchQuery, category, isSidebarVisible }) => {
       )}
     </div>
   );
+  
 };
 
 export default VideoFeed;

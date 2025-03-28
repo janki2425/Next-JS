@@ -133,7 +133,7 @@ export default function CategoryNav({ onCategoryChange }) {
 
       {/* Right Gradient Overlay */}
       <div
-        className={`absolute right-17 top-1 lg:top-5 h-10 w-15 z-10 2xl:hidden pointer-events-none transition-opacity duration-300 ${
+        className={`absolute right-13 top-1 lg:top-5 h-10 w-15 z-10 2xl:hidden pointer-events-none transition-opacity duration-300 ${
           canScrollRight ? "opacity-100" : "opacity-0"
         } ${
           theme === "dark"
@@ -145,7 +145,7 @@ export default function CategoryNav({ onCategoryChange }) {
       {/* Right Arrow */}
       <button
         onClick={() => scroll("right")}
-        className={`absolute right-18 top-1 lg:top-5 z-20 p-2 2xl:hidden rounded-full transition-opacity duration-300 ${
+        className={`absolute right-15 top-1 lg:top-5 z-20 p-2 2xl:hidden rounded-full transition-opacity duration-300 ${
           canScrollRight ? "opacity-100" : "opacity-0 pointer-events-none"
         } ${theme === "dark" ? "hover:bg-gray-700" : "hover:bg-gray-200"}`}
       >

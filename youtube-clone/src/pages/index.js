@@ -27,7 +27,7 @@ export default function Home() {
       <div className="flex">
         {/* Category Navigation */}
         <div
-          className={`hidden md:block fixed mt-16 transition-all duration-300 ${
+          className={`hidden md:block fixed mt-16 transition-all duration-100 ${
             isSidebarExpanded ? "ml-[230px]" : "ml-[70px]"
           } w-full z-10`}
         >
@@ -38,8 +38,8 @@ export default function Home() {
         <div
           className={`w-full max-w-[2500px] ml-[55px] h-screen 2xl:mx-auto overflow-y-auto scrollbar-hide pt-26 lg:pt-34 transition-all duration-300 ${
             isSidebarExpanded
-              ? "lg:ml-[220px] xl:ml-[215px]"
-              : "lg:ml-[80px] xl:ml-[60px]"
+              ? "lg:ml-[230px] xl:ml-[230px]"
+              : "lg:ml-[80px] xl:ml-[70px]"
           }`}
         >
           <VideoFeed

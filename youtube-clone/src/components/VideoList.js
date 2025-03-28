@@ -17,7 +17,7 @@ const VideoList = ({ videoId, title, channel, views, timestamp }) => {
           ></iframe>
         </div>
         {/* Video Info */}
-        <div className="flex flex-1 items-start pr-5">
+        <div className="flex flex-1 items-start">
             <div className="flex flex-col w-full">
                 <h2 className="text-[11px] lg:text-[14px] font-[500] lg:line-clamp-2">{title}</h2>
                 <p className="text-gray-500 dark:text-gray-400 text-[9px] lg:text-[12px]">
@@ -27,7 +27,7 @@ const VideoList = ({ videoId, title, channel, views, timestamp }) => {
                     {views} • {timestamp}
                 </p>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center p-1 lg:p-0 lg:pr-5">
                 <Image src="/icons/more.svg"
                 width={20}
                 height={20}

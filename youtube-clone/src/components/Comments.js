@@ -54,7 +54,7 @@ function Comments() {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex items-center p-2 mr-4 lg:mr-0 rounded-full hover:bg-gray-100 dark:hover:bg-[#313131]">
+                        <div className="flex items-center mr-0 p-1 rounded-full hover:bg-gray-100 dark:hover:bg-[#313131]">
                             <Image src="/icons/more.svg"
                             width={20}
                             height={20}

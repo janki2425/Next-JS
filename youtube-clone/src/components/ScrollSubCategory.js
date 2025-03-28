@@ -121,7 +121,7 @@ export default function ScrollSubCategory({ onCategoryChange }) {
 
       {/* Right Gradient Overlay */}
       <div
-        className={`absolute right-5 2xl:right-8 top-1 h-10 w-20 z-10 pointer-events-none transition-opacity duration-300 ${
+        className={`absolute right-5 lg:right-0 2xl:right-8 top-1 h-10 w-20 z-10 pointer-events-none transition-opacity duration-300 ${
           canScrollRight ? "opacity-100" : "opacity-0"
         } ${
           theme === "dark"
