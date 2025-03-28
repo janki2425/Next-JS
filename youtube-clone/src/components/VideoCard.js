@@ -52,7 +52,7 @@ const VideoCard = ({ videoId, title, channel, views, timestamp }) => {
           className="rounded-lg w-full md:h-[188px] lg:h-[245px] xl:h-[180px] 2xl:h-[220px] aspect-video"
         ></iframe>
 
-        <div className="p-2">
+        <div className="p-2 dark:bg-[#0f0f0f]">
           <h2 className="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] font-semibold">
             {title}
           </h2>
