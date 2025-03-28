@@ -9,7 +9,8 @@ const VideoCard = ({ videoId, title, channel, views, timestamp, isSidebarVisible
           isSidebarVisible
             ? "lg:w-[365px] lg:h-[370px] lg:ml-4 xl:w-[370px] xl:h-[310px] xl:ml-0 2xl:w-[410px] 2xl:h-[350px] 2xl:ml-8"
             : "lg:w-[445px] lg:h-[390px] xl:w-[305px] xl:h-[300px] 2xl:w-[380px] 2xl:h-[360px] 2xl:ml-[-10px]"
-        }`}
+        }
+        `}
       >
         <iframe
           width="100%"
@@ -17,12 +18,13 @@ const VideoCard = ({ videoId, title, channel, views, timestamp, isSidebarVisible
           src={`https://www.youtube.com/embed/${videoId}`}
           title={title}
           allowFullScreen
-          className={`rounded-[8px] w-[100%] h-[190px] pb-1 
+          className={`rounded-[8px] w-[100%] h-[190px] pb-1 aspect-video
           ${
             isSidebarVisible
               ? "lg:h-[225px] xl:h-[200px] 2xl:h-[205px]"
               : "lg:h-[250px] xl:h-[190px] 2xl:h-[215px]"
-          }`}
+          }
+          `}
         ></iframe>
         <h2 className="text-[15px] lg:text-[20px] xl:text-[15px] 2xl:text-[17px] font-[600] 2xl:font-[500]">
           {title}

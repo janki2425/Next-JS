@@ -73,13 +73,13 @@ const Navbar = ({
       {/* Sheet Sidebar for all screens on video playback page, and md screens on homepage */}
       <Sheet>
         <div
-          className={`fixed w-full h-[46px] items-center px-[12px] z-50 transition-all duration-300 ${
+          className={`fixed w-full h-[46px] items-center z-50 transition-all duration-300 ${
             theme === "dark" ? "bg-[#0f0f0f] text-white" : "bg-white text-black"
           }`}
         >
-          <nav className="flex items-center h-[40px] lg:h-[56px] justify-between xl:justify-start pt-1">
+          <nav className="flex items-center h-[40px] lg:h-[56px] justify-between pt-1 px-3">
             {/* Left Section */}
-            <div className="flex items-center space-x-2 lg:space-x-4 lg:ml-2">
+            <div className="flex items-center gap-3">
               <div className="flex items-center">
                 {/* Show SheetTrigger for all screens on video playback page, and md screens on homepage */}
                 <SheetTrigger
@@ -145,171 +145,173 @@ const Navbar = ({
             </div>
 
             {/* Search Bar */}
-            <div className="flex items-center flex-grow ml-18 xl:ml-52 2xl:justify-center">
-              <form
-                onSubmit={handleSearch}
-                className={`flex relative w-[325px] lg:w-[460px] xl:w-[600px] h-[32px] lg:h-[40px] items-center border-[1px] rounded-full shadow-2xl ${
-                  theme === "dark" ? "border-[#313131]" : "border-gray-300"
-                }`}
-              >
-                <input
-                  type="text"
-                  placeholder="Search"
-                  value={inputValue}
-                  onChange={(e) => setInputValue(e.target.value)}
-                  onKeyDown={(e) => e.key === "Enter" && handleSearch(e)}
-                  className={`w-[274px] h-[30px] lg:w-[396px] xl:w-[536px] lg:h-[38px] indent-4 rounded-l-full text-[0.8rem] lg:text-[16px] ${
-                    theme === "dark" ? "bg-[#0f0f0f] text-white" : "bg-white text-black"
+            <div className="flex items-center gap-2 xl:flex-1">
+              <div className="flex items-center flex-grow xl:justify-center">
+                <form
+                  onSubmit={handleSearch}
+                  className={`flex relative w-[325px] lg:w-[460px] xl:w-[600px] h-[32px] lg:h-[40px] items-center border-[1px] rounded-full shadow-2xl ${
+                    theme === "dark" ? "border-[#313131]" : "border-gray-300"
                   }`}
-                />
-                {inputValue && (
-                  <button type="button" onClick={handleReset}>
+                >
+                  <input
+                    type="text"
+                    placeholder="Search"
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
+                    onKeyDown={(e) => e.key === "Enter" && handleSearch(e)}
+                    className={`w-[274px] h-[30px] lg:w-[396px] xl:w-[536px] lg:h-[38px] indent-4 rounded-l-full text-[0.8rem] lg:text-[16px] ${
+                      theme === "dark" ? "bg-[#0f0f0f] text-white" : "bg-white text-black"
+                    }`}
+                  />
+                  {inputValue && (
+                    <button type="button" onClick={handleReset}>
+                      <Image
+                        src="/icons/reset.svg"
+                        width={18}
+                        height={18}
+                        alt="Reset"
+                        className={`lg:w-[24px] lg:h-[24px] absolute top-1.5 right-14 lg:right-18 ${
+                          theme === "dark" ? "invert" : ""
+                        }`}
+                      />
+                    </button>
+                  )}
+                  <button
+                    type="submit"
+                    className={`border-[1px] rounded-r-full ml-0 w-[50px] lg:w-[65px] h-[32px] lg:h-[40px] flex items-center justify-center cursor-pointer ${
+                      theme === "dark"
+                        ? "bg-[#242424] border-[#313131]"
+                        : "bg-gray-100 hover:bg-gray-300 border-gray-300"
+                    }`}
+                  >
                     <Image
-                      src="/icons/reset.svg"
-                      width={18}
-                      height={18}
-                      alt="Reset"
-                      className={`lg:w-[24px] lg:h-[24px] absolute top-1.5 right-14 lg:right-18 ${
+                      src="/icons/search.svg"
+                      width={19}
+                      height={19}
+                      alt="Search"
+                      className={`w-[19px] h-[19px] lg:w-[24px] lg:h-[24px] ${
                         theme === "dark" ? "invert" : ""
                       }`}
                     />
                   </button>
-                )}
+                </form>
                 <button
-                  type="submit"
-                  className={`border-[1px] rounded-r-full ml-0 w-[50px] lg:w-[65px] h-[32px] lg:h-[40px] flex items-center justify-center cursor-pointer ${
+                  className={`flex items-center p-2 lg:p-2.5 ml-2 lg:ml-3 rounded-full cursor-pointer ${
                     theme === "dark"
-                      ? "bg-[#242424] border-[#313131]"
-                      : "bg-gray-100 hover:bg-gray-300 border-gray-300"
+                      ? "bg-[#242424] hover:bg-[#313131]"
+                      : "bg-gray-100 hover:bg-gray-300"
                   }`}
                 >
                   <Image
-                    src="/icons/search.svg"
-                    width={19}
-                    height={19}
-                    alt="Search"
+                    src="/icons/mic.svg"
+                    width={22}
+                    height={22}
+                    alt="Mic"
                     className={`w-[19px] h-[19px] lg:w-[24px] lg:h-[24px] ${
                       theme === "dark" ? "invert" : ""
                     }`}
                   />
                 </button>
-              </form>
-              <button
-                className={`flex items-center p-2 lg:p-2.5 ml-2 lg:ml-3 rounded-full cursor-pointer ${
-                  theme === "dark"
-                    ? "bg-[#242424] hover:bg-[#313131]"
-                    : "bg-gray-100 hover:bg-gray-300"
-                }`}
-              >
-                <Image
-                  src="/icons/mic.svg"
-                  width={22}
-                  height={22}
-                  alt="Mic"
-                  className={`w-[19px] h-[19px] lg:w-[24px] lg:h-[24px] ${
-                    theme === "dark" ? "invert" : ""
-                  }`}
-                />
-              </button>
-            </div>
+              </div>
 
-            {/* Right Section */}
-            <div className="flex items-center space-x-1 ml-2 xl:mr-3 lg:ml-[-20px] lg:space-x-3 lg:mr-4">
-              <button
-                className={`flex items-center w-[82px] h-[32px] lg:w-[99px] lg:h-[40px] rounded-[40px] cursor-pointer ${
-                  theme === "dark"
-                    ? "bg-[#242424] text-white hover:bg-[#313131]"
-                    : "bg-gray-100 text-black hover:bg-gray-300"
-                }`}
-              >
-                <Image
-                  src="/icons/create.svg"
-                  width={19}
-                  height={19}
-                  alt="Create"
-                  className={`w-[19px] h-[19px] lg:w-[24px] lg:h-[24px] mx-2 ${
-                    theme === "dark" ? "invert" : ""
-                  }`}
-                />
-                <span className="text-[12px] lg:text-[14px] font-[500]">
-                  Create
-                </span>
-              </button>
-              <button
-                className={`rounded-full p-2 cursor-pointer ${
-                  theme === "dark"
-                    ? "text-white hover:bg-[#313131]"
-                    : "text-black hover:bg-gray-300"
-                }`}
-              >
-                <Image
-                  src="/icons/notification.svg"
-                  width={19}
-                  height={19}
-                  alt="Notification"
-                  className={`lg:w-[24px] lg:h-[24px] ${
-                    theme === "dark" ? "invert" : ""
-                  }`}
-                />
-              </button>
-              {/* User Dropdown */}
-              <div className="relative" ref={userMenuRef}>
+              {/* Right Section */}
+              <div className="flex items-center space-x-1 lg:space-x-3">
                 <button
-                  onClick={toggleUserMenu}
-                  className={`p-2 rounded-full cursor-pointer ${
-                    theme === "dark" ? "hover:bg-[#313131]" : "hover:bg-gray-200"
+                  className={`flex items-center w-[82px] h-[32px] lg:w-[99px] lg:h-[40px] rounded-[40px] cursor-pointer ${
+                    theme === "dark"
+                      ? "bg-[#242424] text-white hover:bg-[#313131]"
+                      : "bg-gray-100 text-black hover:bg-gray-300"
                   }`}
                 >
                   <Image
-                    src="/icons/user.svg"
-                    width={24}
-                    height={24}
-                    alt="User"
-                    className={`w-[19px] h-[19px] lg:w-[28px] lg:h-[28px] cursor-pointer ${
+                    src="/icons/create.svg"
+                    width={19}
+                    height={19}
+                    alt="Create"
+                    className={`w-[19px] h-[19px] lg:w-[24px] lg:h-[24px] mx-2 ${
+                      theme === "dark" ? "invert" : ""
+                    }`}
+                  />
+                  <span className="text-[12px] lg:text-[14px] font-[500]">
+                    Create
+                  </span>
+                </button>
+                <button
+                  className={`rounded-full p-2 cursor-pointer ${
+                    theme === "dark"
+                      ? "text-white hover:bg-[#313131]"
+                      : "text-black hover:bg-gray-300"
+                  }`}
+                >
+                  <Image
+                    src="/icons/notification.svg"
+                    width={19}
+                    height={19}
+                    alt="Notification"
+                    className={`lg:w-[24px] lg:h-[24px] ${
                       theme === "dark" ? "invert" : ""
                     }`}
                   />
                 </button>
-                {isUserMenuOpen && (
-                  <div
-                    className={`absolute right-12 top-0 w-[300px] h-[140px] rounded-lg shadow-lg z-50 overflow-y-auto max-h-[80vh] ${
-                      theme === "dark"
-                        ? "bg-[#242424] text-white border-black"
-                        : "bg-white text-black border-gray-200"
-                    } border`}
+                {/* User Dropdown */}
+                <div className="relative" ref={userMenuRef}>
+                  <button
+                    onClick={toggleUserMenu}
+                    className={`p-2 rounded-full cursor-pointer ${
+                      theme === "dark" ? "hover:bg-[#313131]" : "hover:bg-gray-200"
+                    }`}
                   >
-                    <div className="flex items-center justify-center p-4 border-b-[1px] border-gray-200 dark:border-[#313131]">
-                      <Image
-                        src="/icons/user.svg"
-                        width={24}
-                        height={24}
-                        alt="User"
-                        className={`w-[24px] h-[24px] mr-3 ${
-                          theme === "dark" ? "invert" : ""
-                        }`}
-                      />
-                    </div>
-                    <div
-                      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                      className={`flex items-start py-3 gap-5 justify-center mt-4 cursor-pointer ${
-                        theme === "dark"
-                          ? "border-black hover:bg-[#313131]"
-                          : "border-gray-300 hover:bg-gray-100"
+                    <Image
+                      src="/icons/user.svg"
+                      width={24}
+                      height={24}
+                      alt="User"
+                      className={`w-[19px] h-[19px] lg:w-[28px] lg:h-[28px] cursor-pointer ${
+                        theme === "dark" ? "invert" : ""
                       }`}
+                    />
+                  </button>
+                  {isUserMenuOpen && (
+                    <div
+                      className={`absolute right-12 top-0 w-[300px] h-[140px] rounded-lg shadow-lg z-50 overflow-y-auto max-h-[80vh] ${
+                        theme === "dark"
+                          ? "bg-[#242424] text-white border-black"
+                          : "bg-white text-black border-gray-200"
+                      } border`}
                     >
-                      <Image
-                        src="/icons/mode.svg"
-                        width={24}
-                        height={24}
-                        alt="Mode"
-                        className={`${theme === "dark" ? "invert" : ""}`}
-                      />
-                      <p className="text-md">
-                        Appearance: {theme === "dark" ? "Light" : "Dark"}
-                      </p>
+                      <div className="flex items-center justify-center p-4 border-b-[1px] border-gray-200 dark:border-[#313131]">
+                        <Image
+                          src="/icons/user.svg"
+                          width={24}
+                          height={24}
+                          alt="User"
+                          className={`w-[24px] h-[24px] mr-3 ${
+                            theme === "dark" ? "invert" : ""
+                          }`}
+                        />
+                      </div>
+                      <div
+                        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                        className={`flex items-start py-3 gap-5 justify-center mt-4 cursor-pointer ${
+                          theme === "dark"
+                            ? "border-black hover:bg-[#313131]"
+                            : "border-gray-300 hover:bg-gray-100"
+                        }`}
+                      >
+                        <Image
+                          src="/icons/mode.svg"
+                          width={24}
+                          height={24}
+                          alt="Mode"
+                          className={`${theme === "dark" ? "invert" : ""}`}
+                        />
+                        <p className="text-md">
+                          Appearance: {theme === "dark" ? "Light" : "Dark"}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
             </div>
           </nav>
@@ -325,7 +327,7 @@ const Navbar = ({
           <nav className="flex flex-col pt-1">
             <div className="flex items-center space-x-4 mt-[-15px] lg:mt-[-11px] pb-3">
               <SheetTrigger
-                className={`py-2 pl-2 rounded-full ${
+                className={`py-2 pl-3 rounded-full ${
                   theme === "dark" ? "hover:bg-[#313131]" : "hover:bg-gray-200"
                 }`}
               >
@@ -407,7 +409,7 @@ const Navbar = ({
       {alwaysShowSidebar && (
         <div
           className={`block fixed h-screen transition-all duration-300 mt-8 xl:pt-5 ${
-            isSidebarExpanded ? "lg:w-[230px] xl:w-[225px]" : "lg:w-[70px] md:ml-3 lg:ml-0"
+            isSidebarExpanded ? "lg:w-[230px] xl:w-[225px]" : "lg:w-[70px] md:ml-1 lg:ml-0"
           } ${
             theme === "dark" ? "bg-[#0f0f0f] text-white" : "bg-white text-black"
           }`}
@@ -466,11 +468,11 @@ const Navbar = ({
               </div>
             ) : (
               // Collapsed sidebar (for lg and above)
-              <div className="flex flex-col space-y-3 xl:space-y-4 ml-[-10px] mt-5 lg:mt-4 lg:ml-3 xl:mt-4">
+              <div className="flex flex-col space-y-3 xl:space-y-4 mt-5 lg:mt-4 xl:mt-4">
                 {initialMenuItems.map((item, index) => (
                   <div
                     key={index}
-                    className={`flex flex-col items-center gap-1 px-1 rounded-lg py-2 cursor-pointer ${
+                    className={`flex flex-col items-center gap-1 rounded-lg py-2 cursor-pointer ${
                       theme === "dark" ? "hover:bg-[#313131]" : "hover:bg-gray-200"
                     }`}
                   >
