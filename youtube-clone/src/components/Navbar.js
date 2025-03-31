@@ -362,7 +362,7 @@ const Navbar = ({
             {allMenuItems.map((item, index) => (
               <div
                 key={index}
-                className={`flex items-center gap-4 py-[6px] px-2 rounded-lg cursor-pointer 
+                className={`flex items-center gap-4 p-2 my-0.5 rounded-lg cursor-pointer 
                 ${theme === "dark" ? "hover:bg-[#313131]" : "hover:bg-gray-200"} 
                 ${
                   index === 0
