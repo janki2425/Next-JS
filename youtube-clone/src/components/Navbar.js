@@ -327,7 +327,7 @@ const Navbar = ({
           <nav className="flex flex-col pt-1">
             <div className="flex items-center space-x-4 mt-[-15px] lg:mt-[-11px] pb-3">
               <SheetTrigger
-                className={`py-2 pl-3 rounded-full ${
+                className={`p-2 rounded-full ${
                   theme === "dark" ? "hover:bg-[#313131]" : "hover:bg-gray-200"
                 }`}
               >
@@ -336,7 +336,7 @@ const Navbar = ({
                   width={24}
                   height={24}
                   alt="Menu"
-                  className={`w-[20px] h-[20px] cursor-pointer ${
+                  className={`w-[20px] h-[20px] cursor-pointer mx-auto ${
                     theme === "dark" ? "invert" : ""
                   }`}
                 />
