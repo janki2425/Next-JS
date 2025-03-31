@@ -21,7 +21,7 @@ const VideoList = ({ videoId, title, channel, views, timestamp }) => {
               <Image
                 src="/icons/watch-later.svg"
                 width={18}
-                height={20}
+                height={18}
                 alt="Watch Later"
                 className="dark:invert"
               />
@@ -30,7 +30,7 @@ const VideoList = ({ videoId, title, channel, views, timestamp }) => {
               <Image
                 src="/icons/add-to-queue.svg"
                 width={18}
-                height={20}
+                height={18}
                 alt="Add to Queue"
                 className="dark:invert"
               />
