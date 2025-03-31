@@ -23,7 +23,7 @@ const VideoList = ({ videoId, title, channel, views, timestamp }) => {
                 width={18}
                 height={18}
                 alt="Watch Later"
-                className="dark:invert"
+                className="invert"
               />
             </div>
             <div className="flex w-[26px] h-[26px] bg-[#0f0f0f] opacity-80 rounded-[5px] items-center justify-center">
@@ -32,7 +32,7 @@ const VideoList = ({ videoId, title, channel, views, timestamp }) => {
                 width={18}
                 height={18}
                 alt="Add to Queue"
-                className="dark:invert"
+                className="invert"
               />
             </div>
           </div>
