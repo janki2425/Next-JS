@@ -73,11 +73,11 @@ const Navbar = ({
       {/* Sheet Sidebar for all screens on video playback page, and md screens on homepage */}
       <Sheet>
         <div
-          className={`fixed w-full h-[50px] items-center z-50 transition-all duration-300 ${
+          className={`fixed w-full h-[56px] z-50 transition-all duration-300 ${
             theme === "dark" ? "bg-[#0f0f0f] text-white" : "bg-white text-black"
           }`}
         >
-          <nav className="flex items-center h-[40px] lg:h-full justify-between pt-1 px-3">
+          <nav className="flex items-center h-[40px] lg:h-full justify-between px-3">
             {/* Left Section */}
             <div className="flex items-center gap-3">
               <div className="flex items-center">

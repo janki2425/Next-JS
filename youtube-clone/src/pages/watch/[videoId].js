@@ -125,7 +125,7 @@ const Watch = () => {
 
       {/* Video Playback Section */}
       <div className="w-full max-w-[2314px] h-screen overflow-y-auto 2xl:mx-auto scrollbar-hide transition-all duration-300">
-        <div className="pb-6 pt-16 lg:pt-20 lg:grid lg:grid-cols-[2fr_1fr] xl:grid-cols-[2.4fr_1fr] 2xl:grid-cols-[4.5fr_1fr] lg:gap-[6px]">
+        <div className="pb-6 pt-16 lg:pt-22 lg:grid lg:grid-cols-[2fr_1fr] xl:grid-cols-[2.4fr_1fr] 2xl:grid-cols-[4.5fr_1fr] lg:gap-[6px]">
           {/* Left Column: Video Player, Metadata, Comments (for lg screens) */}
           <div className="px-5">
             {/* Video Player */}
