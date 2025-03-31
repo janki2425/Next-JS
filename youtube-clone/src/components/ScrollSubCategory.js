@@ -65,7 +65,7 @@ export default function ScrollSubCategory({ onCategoryChange }) {
 
   return (
     <div
-      className={`flex relative items-center${
+      className={`flex relative items-center ${
         theme === "dark" ? "bg-[#0f0f0f] text-white" : "bg-white text-black"
       }`}
     >
@@ -95,7 +95,7 @@ export default function ScrollSubCategory({ onCategoryChange }) {
       {/* Category Items */}
       <div
         ref={scrollRef}
-        className={`flex gap-3 overflow-x-auto h-[46px] items-center w-[390px] 2xl:w-[370px] scrollbar-hide ${
+        className={`flex gap-3 overflow-x-auto h-[46px] items-center xl:w-[390px] 2xl:w-[370px] scrollbar-hide ${
           theme === "dark" ? "bg-[#0f0f0f] text-white" : "bg-white text-black"
         }`}
         style={{ scrollBehavior: "smooth", whiteSpace: "nowrap" }}
@@ -121,7 +121,7 @@ export default function ScrollSubCategory({ onCategoryChange }) {
 
       {/* Right Gradient Overlay */}
       <div
-        className={`absolute right-5 lg:right-0 2xl:right-8 top-1 h-10 w-20 z-10 pointer-events-none transition-opacity duration-300 ${
+        className={`absolute right-0 top-1 h-10 w-20 z-10 pointer-events-none transition-opacity duration-300 ${
           canScrollRight ? "opacity-100" : "opacity-0"
         } ${
           theme === "dark"

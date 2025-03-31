@@ -1,9 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const VideoCard = ({ videoId, title, channel, views, timestamp }) => {
   return (
     <Link href={`/watch/${videoId}`} className="block">
-      <div className="bg-white overflow-hidden">
+      <div className="bg-white overflow-hidden dark:bg-[#0f0f0f]">
         <iframe
           width="100%"
           height="200"
@@ -12,6 +13,7 @@ const VideoCard = ({ videoId, title, channel, views, timestamp }) => {
           allowFullScreen
           className="rounded-lg w-full md:h-[188px] lg:h-[245px] xl:h-[180px] 2xl:h-[220px] aspect-video"
         ></iframe>
+
 
         <div className="p-2 dark:bg-[#0f0f0f]">
           <h2 className="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] font-semibold">
