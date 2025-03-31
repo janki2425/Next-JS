@@ -63,7 +63,7 @@ const VideoFeed = ({ searchQuery, category, isSidebarVisible }) => {
 
   return (
     <div
-      className={`grid grid-cols-1 md:grid-cols-2 gap-4 px-5 2xl:px-0 ${
+      className={`grid grid-cols-1 md:grid-cols-2 gap-4 px-5 2xl:px-3 ${
         isSidebarVisible ? "2xl:ml-48 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6 2xl:pl-3" : "2xl:ml-20 lg:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-6"
       }`}
     >
