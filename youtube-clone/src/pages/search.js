@@ -15,12 +15,10 @@ const SearchPage = () => {
     async function fetchData(){
         const fetchQuery = selectedCategory === "All" ? query : selectedCategory;
         const response = await fetchVideos(fetchQuery);
-        console.log("API Response:", response);
         const fetchedVideos = response?.items || [];
 
         try{
           if (fetchedVideos.length === 0) {
-            console.log("No videos fetched for query:", fetchQuery);
             setVideos([]);
             return;
           }
@@ -35,10 +33,6 @@ const SearchPage = () => {
     fetchData();
   },[query, selectedCategory])
 
-  useEffect(() => {
-    console.log("Videos:", videos);
-    console.log("Selected Category:", selectedCategory);
-  }, [selectedCategory, videos]);
 
   return (
     <div className="p-4">

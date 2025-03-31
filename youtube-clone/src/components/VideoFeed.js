@@ -38,18 +38,14 @@ const VideoFeed = ({ searchQuery, category, isSidebarVisible }) => {
         setError(null);
 
         const query = searchQuery || (category === "All" ? "trending videos" : category);
-        console.log("Fetching videos for query:", query);
         const response = await fetchVideos(query);
-        console.log("API Response:", response);
         const fetchedVideos = response?.items || [];
 
         if (fetchedVideos.length === 0) {
-          console.log("No videos fetched for query:", query);
           setVideos([]);
           return;
         }
 
-        console.log("Fetched videos:", fetchedVideos);
         setVideos(fetchedVideos);
       } catch (error) {
         console.error("Error fetching videos:", error);

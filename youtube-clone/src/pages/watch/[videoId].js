@@ -78,9 +78,7 @@ const Watch = () => {
     const fetchRelatedVideos = async () => {
       try {
         const query = videoData.hashtags.join(" ");
-        console.log("Fetching related videos for query:", query);
         const response = await fetchVideos(query);
-        console.log("API Response:", response);
         const fetchedVideos = response?.items || [];
 
         const filteredVideos = fetchedVideos.filter(

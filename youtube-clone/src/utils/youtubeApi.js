@@ -10,7 +10,6 @@ try {
   const url = `${BASE_URL}/search?part=snippet&q=${encodeURIComponent(
     query
   )}&key=${API_KEY}&type=video&maxResults=12`;
-  console.log("Fetching videos with URL:", url);
   const response = await fetch(url);
 
   if (!response.ok) {
@@ -22,7 +21,6 @@ try {
   }
 
   const data = await response.json();
-  console.log("YouTube API Response:", data);
 
   if (data.error) {
     throw new Error(`YouTube API error: ${data.error.message}`);
@@ -42,7 +40,6 @@ if (!API_KEY) {
 
 try {
   const url = `${BASE_URL}/videos?part=snippet&id=${videoId}&key=${API_KEY}`;
-  console.log("Fetching video details with URL:", url);
   const response = await fetch(url);
 
   if (!response.ok) {
@@ -54,7 +51,6 @@ try {
   }
 
   const data = await response.json();
-  console.log("YouTube API Response:", data);
 
   if (data.error) {
     throw new Error(`YouTube API error: ${data.error.message}`);
